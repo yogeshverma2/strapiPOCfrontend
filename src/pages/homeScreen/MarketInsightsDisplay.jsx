@@ -24,8 +24,8 @@ const MarketInsightsDisplay = ({ selectedCrop, selectedMandi }) => {
         <div key={insight.id}>
             <ReactMarkdown rehypePlugins={[rehypeRaw]}>{insight.attributes.content_detail}</ReactMarkdown>
            {/* <h3>{insight.attributes.content_detail}</h3> */}
-          <img src={insight.attributes.list_view_image_thumbnail.data.url} alt="Thumbnail" />
-          <img src={insight.attributes.detail_view_img.data.url} alt="Detail View" />
+          <img src={insight.attributes.list_view_image_thumbnail.data.attributes.url} alt="Thumbnail" />
+          <img src={insight.attributes.detail_view_img.data.attributes.url} alt="Detail View" />
         </div>
       ))}
     </div>
