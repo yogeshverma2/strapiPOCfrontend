@@ -8,7 +8,7 @@ const MarketInsightsDisplay = ({ selectedCrop, selectedMandi }) => {
   const [marketInsights, setMarketInsights] = useState([]);
 
   useEffect(() => {
-    axios.get(`http://localhost:1337/api/market-insights?crop_id=${selectedCrop}&mandi_id=${selectedMandi}`,{headers:{Authorization :'Bearer 36adf71672d8b8a85f4b1d4df5ff1b7d56a9388a3d9aaabc28286454112b94e564aee8b0db4ba082df1630caa61949937bf5d6affa9e4557dc924f3e9220981070738c698889598e8cee7d66d0d11300483ec616e8ab12cc10954460848c25690554aad35fc48c28091d101ac5e53493e34e7f6d95941934ae675a14cc9b9b5a'}})
+    axios.get(`https://harmonious-horn-aa3f1ee25a.strapiapp.com/api/market-insights?crop_id=${selectedCrop}&mandi_id=${selectedMandi}`,{headers:{Authorization :'Bearer faeff3675b0b3589e13987c2a796dbabc956d05253e200472db4a68f53a63c059174932fa4cb3368a729dc7f3c8c8e01068cefd1f1f505fcf8566a8e15bb0bb0a797ecc93b778c41abd4d4157ad0fec6af1e764fc8bf638eca214c8f8bbbc7bb2c3649df7caeaba40f08da9f03b9005d796bcf1483b59e7767fbac4bc4e78b05'}})
       .then(response => {
         setMarketInsights(response.data.data);
       })
